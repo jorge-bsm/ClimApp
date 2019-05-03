@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".Humedad">
+
+
+
+    <LinearLayout
+        android:weightSum="100"
+        android:layout_weight="45"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="top|center"
+            android:text="Humedad Actual"
+            android:textSize="30sp"
+            android:textColor="#BDBDBD"
+            android:textStyle="normal|italic"/>
+
+        <com.github.anastr.speedviewlib.ProgressiveGauge
+            android:id="@+id/gaugeHum"
+            android:layout_weight="70"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_withTremble="false"
+            app:sv_speedometerBackColor="@color/CornflowerBlue"
+            app:sv_speedometerColor="@color/Blue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="45"
+        android:orientation="vertical">
+        <TextView
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="top|center"
+            android:text="Humedad Promedio"
+            android:textSize="30sp"
+            android:textColor="#BDBDBD"
+            android:textStyle="normal|italic"/>
+
+
+
+        <com.github.anastr.speedviewlib.ProgressiveGauge
+            android:id="@+id/gaugeHumProm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            app:sv_withTremble="false"
+            android:layout_gravity="center"
+            app:sv_speedometerBackColor="@color/CornflowerBlue"
+            app:sv_speedometerColor="@color/Blue"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/AliceBlue"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_weight="25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/rad"
+                android:focusableInTouchMode="true"
+                android:drawableTop="@drawable/ic_rad2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/AliceBlue"
+                android:gravity="center"
+                android:text="Radiación"
+                android:textColor="#BDBDBD"
+                android:textSize="12dp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/temp"
+                android:drawableTop="@drawable/ic_temp2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/AliceBlue"
+                android:gravity="center"
+                android:text="Temperatura"
+                android:textColor="#BDBDBD"
+                android:textSize="10dp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/actualizar"
+                android:drawableTop="@drawable/ic_update2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/AliceBlue"
+                android:gravity="center"
+                android:text="Actualizar"
+                android:textColor="#BDBDBD"
+                android:textSize="12dp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/volver"
+                android:drawableTop="@drawable/ic_home2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/AliceBlue"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="#BDBDBD"
+                android:textSize="12dp"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
